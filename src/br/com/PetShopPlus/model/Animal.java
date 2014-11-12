@@ -2,6 +2,7 @@ package br.com.PetShopPlus.model;
 
 public class Animal {
 	
+	private int rgDoAnimal;
 	private String nome;
 	private String sexo;
 	private String raça;
@@ -9,6 +10,13 @@ public class Animal {
 	private String porte;
 	private String idade;
 	
+	
+	public int getRgDoAnimal() {
+		return rgDoAnimal;
+	}
+	public void setRgDoAnimal(int rgDoAnimal) {
+		this.rgDoAnimal = rgDoAnimal;
+	}
 	public String getNome() {
 		return nome;
 	}

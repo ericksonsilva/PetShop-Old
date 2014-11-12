@@ -4,7 +4,6 @@ public class Funcionario {
 	
 	private String nome;
 	private String cpf;
-	private String rg;
 	private String telefone;
 	private String rua;
 	private String complemento;
@@ -24,12 +23,6 @@ public class Funcionario {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	public String getRg() {
-		return rg;
-	}
-	public void setRg(String rg) {
-		this.rg = rg;
 	}
 	public String getTelefone() {
 		return telefone;
