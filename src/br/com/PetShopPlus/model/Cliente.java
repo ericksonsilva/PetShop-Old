@@ -1,6 +1,6 @@
 package br.com.PetShopPlus.model;
 
-public class Funcionario {
+public class Cliente {
 	
 	private String nome;
 	private String cpf;
@@ -10,9 +10,8 @@ public class Funcionario {
 	private String complemento;
 	private String bairro;
 	private String cidade;
+	private String cep;
 	private String email;
-	private String funcao;
-
 	
 	public String getNome() {
 		return nome;
@@ -62,16 +61,19 @@ public class Funcionario {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getFuncao() {
-		return funcao;
-	}
-	public void setFuncao(String funcao) {
-		this.funcao = funcao;
-	}
+	
+	
+
 }
