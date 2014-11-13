@@ -8,7 +8,7 @@ import br.com.petshopplus.model.Funcionario;
 public class FuncionarioDao implements FuncionarioInterfaceDao {
 
 	@Override
-	public void apagar(String cpf) {
+	public void apagarFuncionario(String cpf) {
 		// TODO Auto-generated method stub
 
 	}
@@ -26,7 +26,7 @@ public class FuncionarioDao implements FuncionarioInterfaceDao {
 	}
 
 	@Override
-	public List<Funcionario> buscarFuncionario(String cpf) {
+	public Funcionario buscarFuncionario(String cpf) {
 		// TODO Auto-generated method stub
 		return null;
 	}

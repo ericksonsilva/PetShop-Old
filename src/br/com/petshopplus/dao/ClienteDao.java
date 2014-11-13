@@ -26,7 +26,7 @@ public class ClienteDao implements ClienteInterfaceDao {
 	}
 
 	@Override
-	public List<Cliente> buscarCliente(String cpf) {
+	public Cliente buscarCliente(String cpf) {
 		// TODO Auto-generated method stub
 		return null;
 	}

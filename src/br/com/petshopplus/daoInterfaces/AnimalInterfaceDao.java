@@ -11,7 +11,7 @@ public interface AnimalInterfaceDao {
 	  
 	void atualizarAnimal(Animal animal);
 	  
-	List<Animal> buscarAnimal(String rgDoAnimal);  
+	Animal buscarAnimal(String rgDoAnimal);  
 	  
 	void insereAnimal(Animal animal);
 }

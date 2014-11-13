@@ -26,7 +26,7 @@ public class AnimalDao implements AnimalInterfaceDao {
 	}
 
 	@Override
-	public List<Animal> buscarAnimal(String rgDoAnimal) {
+	public Animal buscarAnimal(String rgDoAnimal) {
 		// TODO Auto-generated method stub
 		return null;
 	}
