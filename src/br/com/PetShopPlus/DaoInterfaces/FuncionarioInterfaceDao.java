@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.PetShopPlus.model.Funcionario;
 
-public interface DaoFuncionarioIrterface {
+public interface FuncionarioInterfaceDao {
 	void apagar(String cpf);  
 	  
 	List<Funcionario> buscarTodosFuncionarios();  

@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.PetShopPlus.model.Animal;
 
-public interface DaoAnimalInterface {
+public interface AnimalInterfaceDao {
 	void apagarAnimal(String rgDoAnimal);  
 	   
 	List<Animal> buscarTodosAnimais();

@@ -2,10 +2,10 @@ package br.com.PetShopPlus.Dao;
 
 import java.util.List;
 
-import br.com.PetShopPlus.DaoInterfaces.DaoFuncionarioIrterface;
+import br.com.PetShopPlus.DaoInterfaces.FuncionarioInterfaceDao;
 import br.com.PetShopPlus.model.Funcionario;
 
-public class DaoFuncionario implements DaoFuncionarioIrterface {
+public class FuncionarioDao implements FuncionarioInterfaceDao {
 
 	@Override
 	public void apagar(String cpf) {

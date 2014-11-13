@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.PetShopPlus.model.Cliente;
 
-public interface DaoClienteInterface {
+public interface ClienteInterfaceDao {
 	void apagarCliente(String cpf);  
 	  
 	List<Cliente> buscarTodosClientes();
