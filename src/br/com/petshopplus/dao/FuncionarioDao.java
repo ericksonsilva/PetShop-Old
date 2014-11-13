@@ -1,9 +1,9 @@
-package br.com.PetShopPlus.Dao;
+package br.com.petshopplus.dao;
 
 import java.util.List;
 
-import br.com.PetShopPlus.DaoInterfaces.FuncionarioInterfaceDao;
-import br.com.PetShopPlus.model.Funcionario;
+import br.com.petshopplus.daoInterfaces.FuncionarioInterfaceDao;
+import br.com.petshopplus.model.Funcionario;
 
 public class FuncionarioDao implements FuncionarioInterfaceDao {
 

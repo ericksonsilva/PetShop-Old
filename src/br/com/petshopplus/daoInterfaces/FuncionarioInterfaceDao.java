@@ -1,8 +1,8 @@
-package br.com.PetShopPlus.DaoInterfaces;
+package br.com.petshopplus.daoInterfaces;
 
 import java.util.List;
 
-import br.com.PetShopPlus.model.Funcionario;
+import br.com.petshopplus.model.Funcionario;
 
 public interface FuncionarioInterfaceDao {
 	void apagar(String cpf);  

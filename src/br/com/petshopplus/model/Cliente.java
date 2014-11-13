@@ -1,16 +1,23 @@
-package br.com.PetShopPlus.model;
+package br.com.petshopplus.model;
 
-public class Funcionario {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Clientes")
+public class Cliente {
 	
-	private String nome;
+	@Id
 	private String cpf;
+	private String nome;
 	private String telefone;
 	private String rua;
 	private String complemento;
 	private String bairro;
 	private String cidade;
+	private String cep;
 	private String email;
-	private String funcao;
 	
 	public String getNome() {
 		return nome;
@@ -54,18 +61,19 @@ public class Funcionario {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
 
-	public String getFuncao() {
-		return funcao;
-	}
-	public void setFuncao(String funcao) {
-		this.funcao = funcao;
-	}
 }

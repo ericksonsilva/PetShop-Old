@@ -1,8 +1,8 @@
-package br.com.PetShopPlus.DaoInterfaces;
+package br.com.petshopplus.daoInterfaces;
 
 import java.util.List;
 
-import br.com.PetShopPlus.model.Animal;
+import br.com.petshopplus.model.Animal;
 
 public interface AnimalInterfaceDao {
 	void apagarAnimal(String rgDoAnimal);  

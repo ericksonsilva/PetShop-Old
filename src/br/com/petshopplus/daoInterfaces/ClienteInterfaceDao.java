@@ -1,8 +1,8 @@
-package br.com.PetShopPlus.DaoInterfaces;
+package br.com.petshopplus.daoInterfaces;
 
 import java.util.List;
 
-import br.com.PetShopPlus.model.Cliente;
+import br.com.petshopplus.model.Cliente;
 
 public interface ClienteInterfaceDao {
 	void apagarCliente(String cpf);  

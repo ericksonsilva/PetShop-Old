@@ -1,9 +1,9 @@
-package br.com.PetShopPlus.Dao;
+package br.com.petshopplus.dao;
 
 import java.util.List;
 
-import br.com.PetShopPlus.DaoInterfaces.AnimalInterfaceDao;
-import br.com.PetShopPlus.model.Animal;
+import br.com.petshopplus.daoInterfaces.AnimalInterfaceDao;
+import br.com.petshopplus.model.Animal;
 
 public class AnimalDao implements AnimalInterfaceDao {
 

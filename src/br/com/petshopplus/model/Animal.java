@@ -1,8 +1,15 @@
-package br.com.PetShopPlus.model;
+package br.com.petshopplus.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Animais")
 public class Animal {
 	
-	private int rgDoAnimal;
+	@Id
+	private int registro;
 	private String nome;
 	private String sexo;
 	private String raça;
@@ -11,11 +18,12 @@ public class Animal {
 	private String idade;
 	
 	
-	public int getRgDoAnimal() {
-		return rgDoAnimal;
+	
+	public int getRegistro() {
+		return registro;
 	}
-	public void setRgDoAnimal(int rgDoAnimal) {
-		this.rgDoAnimal = rgDoAnimal;
+	public void setRegistro(int registro) {
+		this.registro = registro;
 	}
 	public String getNome() {
 		return nome;
