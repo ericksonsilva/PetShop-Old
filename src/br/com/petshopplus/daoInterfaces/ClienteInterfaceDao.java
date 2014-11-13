@@ -11,7 +11,7 @@ public interface ClienteInterfaceDao {
 	  
 	void atualizarCliente(Cliente cliente);  
 	  
-	List<Cliente> buscarCliente(String cpf);  
+	Cliente buscarCliente(String cpf);  
 	  
     void insereCliente(Cliente cliente);  
 }
