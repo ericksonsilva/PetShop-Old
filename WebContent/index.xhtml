@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui">  
+  
+    <h:head>  
+  
+    </h:head>  
+      
+    <h:body>  
+      
+   <h:form style = "background-color:#e2e2e2; width:300px; height:250px;"  >
+        <h:panelGrid>
+       		<h:outputLabel for="name" value="Name:" style="font-weight:bold" />
+        	<p:inputText id="name" />
+        </h:panelGrid>
+   		
+   		<h:panelGrid>
+			<h:outputLabel for="ultimoname" value="Ultimo Name:" style="font-weight:bold" />
+        	<p:inputText id="ultimoname" required="true"/>   		
+   		</h:panelGrid>
+        
+        <h:panelGrid>
+       		<h:outputText value="Senha" />
+        	<p:password  id="senha" />
+        </h:panelGrid>
+   
+		<p:button value="Enviar" icon="ui-icon-star" > 
+			<f:param name="botaoEnviar" value="10" ></f:param>
+		</p:button>
+
+</h:form>          
+    </h:body>  
+</html>  

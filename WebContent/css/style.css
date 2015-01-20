@@ -1,9 +1,15 @@
 @CHARSET "UTF-8";
 /*Configuração Login*/
+body{
+	background-image: url("../img/background.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
 .form-login {
+	position:center;
     max-width: 330px;
     margin: 100px auto 0;
-    background: #fff;
+    background: #e2e2e2		;
     border-radius: 5px;
     -webkit-border-radius: 5px;
 }
