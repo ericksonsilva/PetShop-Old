@@ -35,19 +35,19 @@ public class AnimalDao {
 		tx.commit();
 	}
 	
-	public Animal carrega(int registro) {
-		return (Animal) this.session.get(Animal.class, registro);
+	public Animal carrega(int id) {
+		return (Animal) this.session.get(Animal.class, id);
 	}
 	
 	public Animal carrega(Animal animal) {
 		return (Animal) session.createCriteria(Animal.class)
-		.add(Restrictions.eq("registro", animal.getRegistro()))
+		.add(Restrictions.eq("id", animal.getId()))
 		.uniqueResult();
 	}
 	
 	public boolean existeAnimal(Animal animal) {
 		Animal encontrado = (Animal) session.createCriteria(Animal.class)
-				.add(Restrictions.eq("url", animal.getRegistro()))
+				.add(Restrictions.eq("nome", animal.getNome()))
 				.uniqueResult();
 				return encontrado != null;
 	}	

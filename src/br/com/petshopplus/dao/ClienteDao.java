@@ -41,7 +41,7 @@ public class ClienteDao {
 	
 	public Cliente carrega(Cliente cliente) {
 		return (Cliente) session.createCriteria(Cliente.class)
-		.add(Restrictions.eq("registro", cliente.getCpf()))
+		.add(Restrictions.eq("cpf", cliente.getCpf()))
 		.uniqueResult();
 	}
 	

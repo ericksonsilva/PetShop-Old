@@ -41,7 +41,7 @@ public class FuncionarioDao {
 	
 	public Funcionario carrega(Funcionario funcionario) {
 		return (Funcionario) session.createCriteria(Funcionario.class)
-		.add(Restrictions.eq("registro", funcionario.getCpf()))
+		.add(Restrictions.eq("cpf", funcionario.getCpf()))
 		.uniqueResult();
 	}
 	
