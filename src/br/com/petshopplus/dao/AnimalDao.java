@@ -3,44 +3,63 @@ package br.com.petshopplus.dao;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import br.com.petshopplus.model.Animal;
 import br.com.petshopplus.persistence.HibernateUtil;
 
 public class AnimalDao {
 	
-	Session session;
-	HibernateUtil hu;
+	private final Session session;
 	
 	public AnimalDao(){
-		hu = hu.getInstance();
-		session = hu.getSession();
+		session = HibernateUtil.getInstance().getSession();
 	}
 
-	public void apagarAnimal(String rgDoAnimal) {
-		// TODO Auto-generated method stub
-
+	public void salva(Animal animal) {
+		Transaction tx = session.beginTransaction();
+		this.session.save(animal);
+		tx.commit();
 	}
-
-	public List<Animal> buscarTodosAnimais() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public void atualiza(Animal animal) {
+		Transaction tx = session.beginTransaction();
+		this.session.update(animal);
+		tx.commit();
 	}
-
-	public void atualizarAnimal(Animal animal) {
-		// TODO Auto-generated method stub
-
+	
+	public void remove(Animal animal) {
+		Transaction tx = session.beginTransaction();
+		this.session.delete(animal);
+		tx.commit();
 	}
-
-	public Animal buscarAnimal(String rgDoAnimal) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public Animal carrega(int registro) {
+		return (Animal) this.session.get(Animal.class, registro);
 	}
-
-	public void insereAnimal(Animal animal) {
-		session.beginTransaction();
-		session.save(animal);
-
+	
+	public Animal carrega(Animal animal) {
+		return (Animal) session.createCriteria(Animal.class)
+		.add(Restrictions.eq("registro", animal.getRegistro()))
+		.uniqueResult();
 	}
-
+	
+	public boolean existeAnimal(Animal animal) {
+		Animal encontrado = (Animal) session.createCriteria(Animal.class)
+				.add(Restrictions.eq("url", animal.getRegistro()))
+				.uniqueResult();
+				return encontrado != null;
+	}	
+	
+	@SuppressWarnings("unchecked")
+	public List<Animal> lista(String nome) {
+		return this.session.createCriteria(Animal.class)
+		.add(Restrictions.eq("nome", nome)).list();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Animal> lista() {
+		return this.session.createCriteria(Animal.class).list();
+	}
 }

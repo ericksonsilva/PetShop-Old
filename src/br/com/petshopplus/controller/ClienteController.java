@@ -7,26 +7,37 @@ import br.com.petshopplus.dao.ClienteDao;
 import br.com.petshopplus.model.Cliente;
 
 public class ClienteController {
-	private ClienteDao clienteController;
+	private ClienteDao dao;
 	public ClienteController() {
-		clienteController = new ClienteDao();
+		dao = new ClienteDao();
+	}
+	
+	public void adiciona(Cliente cliente){
+		dao.salva(cliente);
+	}
+	
+	public void atualiza(Cliente cliente){
+		dao.atualiza(cliente);
+	}
+	
+	public void apaga(Cliente cliente){
+		dao.remove(cliente);
+	}
+	
+	public Cliente busca(String cpf){
+		return dao.carrega(cpf);
+	}
+	
+	public Cliente busca(Cliente cliente){
+		return dao.carrega(cliente);
+	}
+		
+	public List<Cliente> lista(){
+		return dao.lista();
+	}
+	
+	public List<Cliente> lista(String nome){
+		return dao.lista(nome);
 	}
 
-	public void insereCliente(Cliente cliente){
-		clienteController.insereCliente(cliente);
-	}
-	
-	public void atualizarAnimal(Cliente cliente){
-		clienteController.atualizarCliente(cliente);
-	}
-	public void apagarAnimal(String cpf){
-		clienteController.apagarCliente(cpf);
-	}
-	
-	public Cliente buscarAnimal(String cpf){
-		return clienteController.buscarCliente(cpf);
-	}
-	public List<Cliente> buscarTodosClientes(){
-		return clienteController.buscarTodosClientes();
-	}
 }

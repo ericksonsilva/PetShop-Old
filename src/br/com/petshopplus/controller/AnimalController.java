@@ -6,28 +6,38 @@ import br.com.petshopplus.dao.AnimalDao;
 import br.com.petshopplus.model.Animal;
 
 public class AnimalController {
-	private AnimalDao animalController;
+	private AnimalDao dao;
 	
 	public AnimalController() {
-		animalController = new AnimalDao();
+		dao = new AnimalDao();
 	}
 	
-	public void insereAnimal(Animal animal){
-		animalController.insereAnimal(animal);
+	public void adiciona(Animal animal){
+		dao.salva(animal);
 	}
 	
-	public void atualizarAnimal(Animal animal){
-		animalController.atualizarAnimal(animal);
-	}
-	public void apagarAnimal(String rgDoAnimal){
-		animalController.apagarAnimal(rgDoAnimal);
+	public void atualiza(Animal animal){
+		dao.atualiza(animal);
 	}
 	
-	public Animal buscarAnimal(String rgDoAnimal){
-		return animalController.buscarAnimal(rgDoAnimal);
+	public void apaga(Animal animal){
+		dao.remove(animal);
 	}
-	public List<Animal> buscarTodosAnimais(){
-		return animalController.buscarTodosAnimais();
+	
+	public Animal busca(int registro){
+		return dao.carrega(registro);
+	}
+	
+	public Animal busca(Animal animal){
+		return dao.carrega(animal);
+	}
+		
+	public List<Animal> lista(){
+		return dao.lista();
+	}
+	
+	public List<Animal> lista(String nome){
+		return dao.lista(nome);
 	}
 	
 }
