@@ -1,3 +1,11 @@
-/target/
-target/*
+bin
+gen
 target
+.settings
+.classpath
+.project
+*.keystore
+*.swp
+*.orig
+*.log
+*.properties
